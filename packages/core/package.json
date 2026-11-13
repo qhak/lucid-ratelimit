@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Distributed rate limiting for Cloudflare Workers using Durable Objects.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhak/lucid-ratelimit.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/qhak/lucid-ratelimit#readme",
+  "bugs": {
+    "url": "https://github.com/qhak/lucid-ratelimit/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "files": [

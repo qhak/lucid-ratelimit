@@ -2,6 +2,7 @@
 
 **Distributed rate limiting for Cloudflare Workers, coordinated by Durable Objects.**
 
+[![CI](https://github.com/qhak/lucid-ratelimit/actions/workflows/ci.yml/badge.svg)](https://github.com/qhak/lucid-ratelimit/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Runtime: Cloudflare Workers](https://img.shields.io/badge/runtime-Cloudflare%20Workers-orange)
@@ -10,7 +11,7 @@ Lucid RateLimit provides atomic, persistent rate-limit decisions at the edge. Th
 
 ## Status
 
-This repository is prepared for an initial release, but it has not been published or deployed. The npm registry currently returns 404 for `@lucid/ratelimit`; that means no public package/version was found, and does not reserve the name or prove that the `@lucid` scope is available to your account. Change the `name` fields and imports before release if needed.
+The public source repository is [qhak/lucid-ratelimit](https://github.com/qhak/lucid-ratelimit). The npm packages are prepared for an initial release but have not been published, and no Cloudflare resources have been deployed. The npm registry returned 404 for `@lucid/ratelimit` when checked; that means no public package/version was found, and does not reserve the name or prove that the `@lucid` scope is available to your account. Change the `name` fields and imports before release if needed.
 
 ## Install
 

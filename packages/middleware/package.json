@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Optional Worker and Hono middleware for @lucid/ratelimit.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qhak/lucid-ratelimit.git",
+    "directory": "packages/middleware"
+  },
+  "homepage": "https://github.com/qhak/lucid-ratelimit#readme",
+  "bugs": {
+    "url": "https://github.com/qhak/lucid-ratelimit/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "files": [
