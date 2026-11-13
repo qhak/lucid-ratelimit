@@ -1,0 +1,38 @@
+{
+  "name": "@lucid/ratelimit",
+  "version": "0.1.0",
+  "description": "Distributed rate limiting for Cloudflare Workers using Durable Objects.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./durable-object": {
+      "types": "./dist/durable-object/index.d.ts",
+      "import": "./dist/durable-object/index.js"
+    },
+    "./algorithms": {
+      "types": "./dist/algorithms/index.d.ts",
+      "import": "./dist/algorithms/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

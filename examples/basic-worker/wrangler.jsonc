@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "lucid-ratelimit-basic",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-13",
+  "durable_objects": {
+    "bindings": [{ "name": "RATE_LIMITER", "class_name": "RateLimitDurableObject" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RateLimitDurableObject"] }],
+}

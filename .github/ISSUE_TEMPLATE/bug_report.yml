@@ -1,0 +1,26 @@
+name: Bug report
+description: Report incorrect rate-limit behavior or a package defect.
+labels: [bug]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed result and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include a minimal Worker configuration and code sample. Remove secrets and user identifiers.
+      render: typescript
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Lucid RateLimit, Wrangler, Workers compatibility date, and runtime.
+    validations:
+      required: true

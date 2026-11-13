@@ -1,0 +1,21 @@
+name: Release candidate check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run release:check
+      - run: npm pack --dry-run --workspace @lucid/ratelimit
+      - run: npm pack --dry-run --workspace @lucid/ratelimit-middleware

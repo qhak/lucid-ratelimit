@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "baseUrl": "..",
+    "paths": {
+      "@lucid/ratelimit": ["packages/core/src/index.ts"],
+      "@lucid/ratelimit/durable-object": ["packages/core/src/durable-object/index.ts"],
+      "@lucid/ratelimit-middleware": ["packages/middleware/src/index.ts"],
+      "@lucid/ratelimit-middleware/hono": ["packages/middleware/src/hono.ts"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}

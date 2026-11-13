@@ -1,0 +1,38 @@
+{
+  "name": "lucid-ratelimit-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/core",
+    "packages/middleware"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "tsc -b && tsc --noEmit -p tests/tsconfig.json && tsc --noEmit -p examples/tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "npm run build --workspace @lucid/ratelimit && node benchmarks/algorithms.mjs",
+    "bench:do": "vitest run --config vitest.bench.config.ts --reporter=verbose",
+    "changeset": "changeset",
+    "release:check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@cloudflare/vitest-plugin": "^1.0.0",
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "eslint": "^9.39.1",
+    "hono": "^4.13.18",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.49.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  }
+}
